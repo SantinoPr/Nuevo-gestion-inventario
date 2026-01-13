@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inventario/Screens/InventarioScreen.dart';
 import 'package:inventario/Screens/VentaScreen.dart';
 void main() {
   runApp(const Inicioscreen());
@@ -112,8 +113,11 @@ class InicioScreen extends StatelessWidget {
               text: 'Inventario',
               color: Colors.blue,
               onTap: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Inventario')),
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const InventarioScreen(),
+                  ),
                 );
               },
             ),
